@@ -16,9 +16,9 @@ object SparkGraphFrameDemo extends App {
 
   // in Scala
   val bikeStations = spark.read.option("header", "true")
-    .csv("C:/EBA5006/workspace/SparkGraphDemos/data/station_data.csv")
+    .csv("C:/EBA5006/git/GWM2020/SparkGraphDemos/data/station_data.csv")
   val tripData = spark.read.option("header", "true")
-    .csv("C:/EBA5006/workspace/SparkGraphDemos/data/trip_data.csv")
+    .csv("C:/EBA5006/git/GWM2020/SparkGraphDemos/data/trip_data.csv")
 
   //Build a Graph
   val stationVertices = bikeStations.withColumnRenamed("name", "id").distinct()
